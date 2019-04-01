@@ -13,19 +13,19 @@
         </header>
        <section>
            <nav>
-            <ul>
-                <li><a href="index.html"> Homepage </a></li>
-                <li><a> Blog </a></li>
-                <li><a href="references.html">References</a></li>
-				<li><a href="team.html">Team</a></li>
-                <li><a href="review.html"> Review </a></li>
-            </ul>
+                <ul>
+                   <li><a href="website.hmtl.html"> homepage </a></li>
+                   <li><a> blog </a></li>
+                   <li><a href="references.html"> references </a></li>
+                   <li><a href="review.html"> review </a></li>
+                </ul>
             </nav>
             <article>
                 <h1> TinkerCAD simulation </h1>
                 <p>
                     To test our circuitry and coding, we used TinkerCAD, a free online CAD tool by Autodesk.
-                    We first drew the circuit diagram on a piece of paper. <br><br>
+                    We first drew the circuit diagram on a piece of paper.
+                    <br><br>
                     <img src="WhatsApp Image 2019-03-13 at 12.32.35.jpeg" alt="circuit diagram" height="500px" width="700px">
                     <br><br>
                     After that, we set out to build our first circuit on TinkerCAD.
@@ -40,17 +40,81 @@
                     <br><br>
                     <img src="WhatsApp Image 2019-03-25 at 11.24.07.jpeg" alt="circuit diagram" height="500px" width="700px">
                     <br><br>
-                    <hr>
-                    <h1>Actual circuitry</h1>
-                    <p>
-                        placeholder
+                </p>
+                <hr>
+                <h1>Actual circuitry</h1>
+                <p>
+                    <h2> getting components </h2>
+                    After Mr Henry gave us the electrical components needed, we set out to do our circuitry on the breadboard.
+                    However, due to the lack of male to male jumper wires, we encountered difficulties connecting the circuits
+                    together. Therefore, we head down to Sim Lim Square to buy both the rain sensor and the male to male 
+                    jumper wires.
+                    <br><br>
+                    <img src="" alt="wires" height="500px" width="700px">
+                    <br><br>
+                    <h2> circuit testing </h2>
+                    After every component has been collected/brought, we start connecting the circuit together according to 
+                    our circuit diagram shown above. A senior recommended us to just power the servo motors using arduino. 
+                    Therefore, we decided to power the servo motors using breadboard in parallel. We first tried to just use
+                    the toggle switch and it worked.
+                    <br><br>
+                    <img src="" alt="switch" height="500px" width="700px">
+                    <br><br>
+                    We then decided to test out the rain sensor to see how it works. We connected the analog output of the
+                    sensor to an analog input pin in the arduino and connected a digital output pin of the arduino to the LED
+                    light. We found out that the wetter the rain sensor is, the lower is the analog reading of the pin.
+                    Therefore, we adapted by channging both the threshhold value and using "less than" instead of "more than" 
+                    to trigger the servo motor to close the windows.
+                    <br><br>
+                    <img src="" alt="" height="500px" width="700px">
+                    <br><br>
+                    <h2> circuit assembly </h2>
+                    After tesitng, we finally assembled the circuit. However, things did not go as planned. The servo motors
+                    did not turn even if we set it to turn manually. We tried reconnecting the wires but it still did not
+                    work.
+                    <br>
+                    We also realised that the analog pins is picking up random values. At first we are not sure why but we
+                    realised it is because of floating voltage. We managed to solve the problem by grounding the pin we are
+                    using.
+                    <br>
+                    However, the servo motor still did not worked as intended
+                    We thought that maybe the servo motors is not supplied with enough power and we realised there are
+                    2 5v pins in  the arduino board. So, since we have spare breadboard available, we decided to use both the
+                    pins. One of the pins is used to power the servo motors while the other one to power our rain sensor and
+                    toggle switch. It worked initially but then it stopped working. We touched the board and realised it is
+                    very hot. This is when we realised we fried our board. However, we are forunate that the board did not fry.
+                    We then decided to use back our original connection. We realised there was a bug in the code where we
+                    set the condition to HIGH instead of LOW as it should be. We therefore debug the code and this time it 
+                    worked as intended.
+                    <br><br>
+                    We took a video to show that it worked and how it works.
+                    <br>
+                    <a href=""> circuit to drive the windows </a>
+                    <br><br>
+                    The source code is also available below.
+                    <br> 
 
-                    </p>
+
+                </p>
+                <hr>
+                <h1> mechanical components </h1>
+                <p>
+                    placeholder
+                </p>
+                <hr>
+                <h1> completed prototype </h1>
+                <p>
+                    placeholder
+                </p>
+                <hr>
+                <h1> future plans </h1>
+                <p>
+                    placeholder
                 </p>
             </article>   
        </section>
        <footer>
-           Copyright 2019 Team DownPour
+           Team DownPour
        </footer>
 	</body>
 </html>
